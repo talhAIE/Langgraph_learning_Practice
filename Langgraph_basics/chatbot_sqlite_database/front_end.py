@@ -1,8 +1,9 @@
 import streamlit as st
-from chatbot_backend import workflow
+from backend import workflow,retrieve_all_threads
 from langchain_core.messages import HumanMessage
 import uuid
-
+import os
+os.environ['LANGCHAIN_PROJECT']='chatbot_project_obervebility'
 
 def gen_thread_id():
     return uuid.uuid4()
@@ -20,11 +21,13 @@ if 'thread_id' not in st.session_state:
     st.session_state['thread_id']=gen_thread_id()
 
 if 'chat_thread' not in st.session_state:
-    st.session_state['chat_thread']=[]
-    
+    st.session_state['chat_thread']=retrieve_all_threads()
 add_thread(st.session_state['thread_id'])
-
-CONFIG={'configurable':{'thread_id':st.session_state['thread_id']}}
+CONFIG={
+    'configurable':{'thread_id':st.session_state['thread_id']}
+    ,
+    'metadata':st.session_state['thread_id'],
+    'run_name':'chat_turn'}
 
 def reset():
     thread_id=gen_thread_id()

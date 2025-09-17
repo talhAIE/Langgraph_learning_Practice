@@ -8,3 +8,8 @@ dotenv
 streamlit
 wikipedia
 arxiv
+langgraph-checkpoint-sqlite
+langgraph-cli[inmem]
+faiss-cpu
+duckduckgo-search
+ddgs

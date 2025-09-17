@@ -1,0 +1,40 @@
+LangGraph Learning Checklist
+
+Workflows
+- [x] Sequential workflows
+- [x] Parallel workflows (parallelization)
+- [x] Conditional workflows
+- [x] Iterative workflows
+- [x] Prompt chaining
+- [x] Routing
+- [x] Orchestrator
+- [x] Evaluator & Optimizer
+
+Persistence & State Management
+- [x] Persistent workflows in LangGraph
+- [x] Memory saver
+- [x] Fault tolerance
+- [x] Time travel
+- [x] Update state
+
+Integrations
+- [x] Chatbot with SQL database
+
+Core Components
+- [x] State schema (TypedDict, DataClasses)
+- [x] State schema (Pydantic)
+- [x] Chains in LangGraph
+- [x] Tools in LangGraph
+
+Agents & Advanced Features
+- [x] React agent with memory
+- [x] Streaming (stream, astream)
+- [x] Debugging LangGraph
+
+Human-AI Interaction
+- [x] Human-in-the-loop
+
+RAG Extensions
+- [x] Agentic RAG
+- [x] Corrective RAG
+- [x] Adaptive RAG
